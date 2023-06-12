@@ -1,2 +1,2 @@
 # Catering-Dishes-Helper-android-app
-App Catering Helper with machine learning
+Catering and dishes recommendations with Artificial Intelligence
