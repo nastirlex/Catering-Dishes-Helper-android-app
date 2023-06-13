@@ -1,2 +1,2 @@
 # Catering-Dishes-Helper-android-app
-Catering and dishes recommendation app wih recommendation system
+Catering and dishes selection app with recommendation system and artificial intelligence
