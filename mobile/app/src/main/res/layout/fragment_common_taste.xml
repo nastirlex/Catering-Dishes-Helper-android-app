@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.commonTasteScreen.CommonTasteFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/choicePreferencesTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/choice_preferences"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/choiceMeatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/choice_meat"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choicePreferencesTextView" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/meatMaterialButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            app:checkedButton="@id/vegetarianButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choiceMeatTextView"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <Button
+                android:id="@+id/vegetarianButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:fontFamily="@font/inter"
+                android:text="Вегетарианец" />
+
+            <Button
+                android:id="@+id/meatEaterButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:fontFamily="@font/inter"
+                android:text="Мясоед"
+                tools:layout_editor_absoluteX="211dp"
+                tools:layout_editor_absoluteY="244dp" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <TextView
+            android:id="@+id/choiceCuisinesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/choice_cuisines"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meatMaterialButton" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cuisinesChipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="8dp"
+            app:checkedChip="@id/russianChip"
+            app:chipSpacingHorizontal="2dp"
+            app:chipSpacingVertical="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choiceCuisinesTextView"
+            app:selectionRequired="true"
+            app:singleLine="false"
+            app:singleSelection="false">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/russianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/russian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/asianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/asian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/armenianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/armenian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/americanChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/american_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/japaneseChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/japanese_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/caucasianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/caucasian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/georgianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/georgian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/orientalChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/oriental_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/azerbaijanianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/azerbaijani_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/europeanChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/european_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/panAsianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/pan_asian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/jewishChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/jewish_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/vegetarianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/vegetarian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/italianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/italian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/mexicanChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/mexican_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/buryatianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/buryat_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/yakutChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/yakut_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/thaiChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/thai_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/koreanChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/korean_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chineseChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/chinese_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/indianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/indian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/veganChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/vegan_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/frenchChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/french_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/uzbekChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/uzbek_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/hawaiianChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/hawaiian_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/halChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/hal_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/turkishChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/turkish_cuisine"
+                app:chipMinTouchTargetSize="32dp" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/unwantedIngredientsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/inter"
+            android:text="@string/unwanted_ingredients_title"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cuisinesChipGroup" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/unwantedIngredientsChipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingStart="8dp"
+            app:checkedChip="@id/avocadoChip"
+            app:chipSpacingHorizontal="2dp"
+            app:chipSpacingVertical="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unwantedIngredientsTextView"
+            app:selectionRequired="true"
+            app:singleLine="false"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/avocadoChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_avocado"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chickenChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_chicken"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cheeseChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_cheese"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/shrimpChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_shrimp"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/baconChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_bacon"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cucumberChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_cucumber"
+                app:chipMinTouchTargetSize="32dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/onionChip"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="@string/unwanted_ingredient_onion"
+                app:chipMinTouchTargetSize="32dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/unwantedIngredientsChipGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

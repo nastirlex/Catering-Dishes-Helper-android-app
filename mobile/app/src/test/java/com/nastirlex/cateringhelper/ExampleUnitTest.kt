@@ -1,4 +1,4 @@
-package com.nastirlex.cateringdisheshelper
+package com.nastirlex.cateringhelper
 
 import org.junit.Test
 

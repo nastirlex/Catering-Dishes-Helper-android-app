@@ -1,6 +1,5 @@
-package com.nastirlex.cateringdisheshelper.di
+package com.nastirlex.cateringhelper.di
 
-import com.nastirlex.cateringdisheshelper.network.service.GisService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,16 +26,12 @@ object NetworkModule {
     @Provides
     fun provideSimpleRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("http://fitness.wsmob.xyz:22169/")
+            .baseUrl("")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
             .build()
     }
 
 
-    @Singleton
-    @Provides
-    fun provideGisService(retrofit: Retrofit): GisService =
-        retrofit.create(GisService::class.java)
 
 }

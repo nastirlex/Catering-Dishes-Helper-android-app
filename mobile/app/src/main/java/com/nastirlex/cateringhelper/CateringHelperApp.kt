@@ -1,7 +1,7 @@
-package com.nastirlex.cateringdisheshelper
+package com.nastirlex.cateringhelper
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class CateringDishesHelperApp: Application()
+class CateringHelperApp: Application()
