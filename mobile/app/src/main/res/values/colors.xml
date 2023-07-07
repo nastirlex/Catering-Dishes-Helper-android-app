@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="pink">#F40A6F</color>
-    <color name="dark_pink">#D10A60</color>
-    <color name="transparent">#00FFFFFF</color>
-    <color name="card_background">#FBF6F6</color>
-</resources>
