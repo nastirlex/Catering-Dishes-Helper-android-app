@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav_graph"
+    app:startDestination="@id/commonTasteFragment">
+
+    <fragment
+        android:id="@+id/commonTasteFragment"
+        android:name="com.nastirlex.cateringhelper.presentation.commonTasteScreen.CommonTasteFragment"
+        android:label="fragment_common_taste"
+        tools:layout="@layout/fragment_common_taste" >
+        <action
+            android:id="@+id/action_commonTasteFragment_to_filterFragment"
+            app:destination="@id/filterFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/commonTasteFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.nastirlex.cateringhelper.presentation.filterScreen.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" >
+        <action
+            android:id="@+id/action_filterFragment_to_choiceCateringFragment"
+            app:destination="@id/choiceCateringFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/filterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/choiceCateringFragment"
+        android:name="com.nastirlex.cateringhelper.presentation.choiceCateringScreen.ChoiceCateringFragment"
+        android:label="fragment_choice_catering"
+        tools:layout="@layout/fragment_choice_catering" >
+        <action
+            android:id="@+id/action_choiceCateringFragment_to_cateringsTopFragment"
+            app:destination="@id/cateringsTopFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/choiceCateringFragment">
+
+            <argument
+                android:name="cateringName"
+                app:argType="string" />
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cateringsTopFragment"
+        android:name="com.nastirlex.cateringhelper.presentation.cateringsTopScreen.CateringsTopFragment"
+        android:label="fragment_caterings_top"
+        tools:layout="@layout/fragment_caterings_top" >
+
+        <argument
+            android:name="cateringName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cateringsTopFragment_to_dishesFragment"
+            app:destination="@id/dishesFragment"
+            app:popUpTo="@id/cateringsTopFragment">
+
+            <argument
+                android:name="cateringId"
+                app:argType="string" />
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dishesFragment"
+        android:name="com.nastirlex.cateringhelper.presentation.dishesScreen.DishesFragment"
+        android:label="fragment_dishes"
+        tools:layout="@layout/fragment_dishes" >
+
+        <argument
+            android:name="cateringId"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>
